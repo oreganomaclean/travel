@@ -1,46 +1,77 @@
 <!DOCTYPE html>
-<!-- setting the language to english -->
-<html lang="en">
-	<!-- linking my second page to the css file to allow for modifications -->
-	<link rel="stylesheet" type="text/css" href="https://oreganomaclean.github.io/regan.css">	
-  <head>
-    <title>Regan MacLean's Favourites</title>
-  </head>
-  <body>
-	  <!-- adding in the navigation bar to go back and forth between links -->
- <ul.a>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="index2.html">My Favorites</a></li>
-</ul.a> 
-	  <h1>My Favourite Places</h1>
-	  These are a few of  my favorite places that I have been throughout my journey!
-<p1>
-	<h2>Brussels</h2>
-	These are a few of my favorite places that I have been throughout my journey!
-	Pictured here I am in Brussels, Belgium full of chocolate, beer and waffles! Yum.
-	  </p1>
-	  <!-- adding in a hyperlink to an aboslute URL to bring more pizazz to my website -->
-	  <h2> Arc de Triomphe</h2>
-	  <p2>One of my favourite places was Paris for obvious reasons! The view from the top of
-		  the Arc de Triomphe was amazing. Highly recommend the climb up! Please
-	  click on this link to help plan your visit today.
-	  
-<a href="http://www.paris-arc-de-triomphe.fr/en/Prepare-for-your-visit/Visiting-safely-Covid-19">Arc De Triomphe COVID 19 Response</a>
+<html>
+<head>
+<title>My Favourites/title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+</head>
+<body>
 
-	  </p2>
-	  <h2>Interlaken</h2>
-	  <!-- adding in a second hyperlink for a hostel I recommend to anyone -->
-	  <p3>Switzerland was one of the most beautiful countries on my travels. The mountains, the
-	  fresh air and the people made the place so invtiting and enjoyable. Definitely will have to go back! 
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>MY FAVOURITES</b></h1>
+  <p><b>These are a few of  my favorite places that I have been throughout my journey!
+	Pictured here I am in Brussels, Belgium full of chocolate, beer and waffles! Yum.
+	 One of my favourite places was Paris for obvious reasons! The view from the top of
+		  the Arc de Triomphe was amazing. Highly recommend the climb up! Please
+	  click on this link to help plan your visit today. <a href="http://www.paris-arc-de-triomphe.fr/en/Prepare-for-your-visit/Visiting-safely-Covid-19">Arc De Triomphe COVID 19 Response</a>
+	  Switzerland was one of the most beautiful countries on my travels. The mountains, the
+	  fresh air and the people made the place so inviting and enjoyable. Definitely will have to go back! 
 		  This picture was taken in Interlaken. If you are interested in staying in a hostel, I would definitely stay at
 	  <a href="https://www.hostelworld.com/pwa/hosteldetails.php/Balmers-Hostel/Interlaken/715?from=2021-10-22&to=2021-10-25&guests=2">Balmers Hostel</a>
-	  as this place is a fantastic spot to meet international, like minded people while taking in awesome scenery. </p3>
-	  
-	  <!-- adding in my pictures to give some depth to my website -->
-    <img src="/website/arcdetriomphe.jpg" alt="Paris" style="width:511px;height:640px;"> 
-     <img src="/website/brussels.jpg" alt="Brussels" style="width:562px;height:640px;"> 
-     <img src="/website/interlaken.jpg" alt="Interlaken" style="width:828px;height:621px;"> 
-    
-    
-  </body>
+	  as this place is a fantastic spot to meet international, like minded people while taking in awesome scenery.
+	  </b></p>
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+</header>
+</div>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="/w3images/rocks.jpg" style="width:100%">
+    <img src="/w3images/sound.jpg" style="width:100%">
+    <img src="/w3images/woods.jpg" style="width:100%">
+ 
+
+<!-- End Page Content -->
+</div>
+
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
 </html>
